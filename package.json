@@ -1,42 +1,50 @@
 {
-    "name": "install-library-vue",
-    "version": "1.0.0",
-    "main": "dist/index.js",
-    "dependencies": {
-        "find-up": "^2.1.0",
-        "isexe": "^2.0.0",
-        "locate-path": "^2.0.0",
-        "p-try": "^1.0.0",
-        "path-exists": "^3.0.0",
-        "p-limit": "^1.2.0",
-        "pkg-up": "^2.0.0",
-        "which": "^1.3.0",
-        "p-locate": "^2.0.0"
-    },
-    "devDependencies": {
-        "@rabbitcc/install": "^0.0.8"
-    },
-    "scripts": {
-        "start": "yarn build && cross-env NODE_ENV=development node dist/index.js",
-        "test": "jest tests/.*.test.js",
-        "test:spec": "jest tests/.*.spec.js",
-        "test:type": "flow",
-        "test:coverage": "yarn test --coverage",
-        "build": "cross-env NODE_ENV=development yarn rollup -c",
-        "build:prod": "cross-env NODE_ENV=production yarn rollup -c",
-        "build:type": "flow gen-flow-files lib/index.js > dist/install.js.flow",
-        "prepublish": "yarn test:coverage && yarn test:type && yarn build:prod && yarn build:type"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/HairyRabbit/install-library-vue.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "GPL-3.0",
-    "bugs": {
-        "url": "https://github.com/HairyRabbit/install-library-vue/issues"
-    },
-    "homepage": "https://github.com/HairyRabbit/install-library-vue#readme",
-    "description": ""
+  "name": "@rabbitcc/install-library-vue",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "yarn build && cross-env NODE_ENV=development node dist/index.js",
+    "test": "jest tests/.*.test.js",
+    "test:spec": "jest tests/.*.spec.js",
+    "test:type": "flow",
+    "test:coverage": "yarn test --coverage",
+    "build": "cross-env NODE_ENV=development yarn rollup -c",
+    "build:prod": "cross-env NODE_ENV=production yarn rollup -c",
+    "build:type": "flow gen-flow-files lib/index.js > dist/install.js.flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HairyRabbit/install-library-vue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/HairyRabbit/install-library-vue/issues"
+  },
+  "homepage": "https://github.com/HairyRabbit/install-library-vue#readme",
+  "description": "",
+  "dependencies": {
+    "@rabbitcc/install": "0.0.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.38",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.38",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.38",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0-beta.38",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0-beta.38",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.38",
+    "@babel/preset-env": "^7.0.0-beta.38",
+    "@babel/preset-flow": "^7.0.0-beta.38",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^22.1.0",
+    "flow-bin": "^0.63.1",
+    "jest": "^22.1.2",
+    "rollup": "^0.53.4",
+    "rollup-plugin-babel": "^4.0.0-beta.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
 }

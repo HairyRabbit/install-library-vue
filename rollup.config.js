@@ -17,5 +17,5 @@ export default {
     json({ exclude: 'node_modules/**' }),
     commonjs({ exclude: 'node_modules/**' })
   ],
-  external: ['which', 'pkg-up']
+  external: ['@rabbitcc/install']
 }
